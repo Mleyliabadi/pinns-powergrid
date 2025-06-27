@@ -1,13 +1,17 @@
 # GNN Powergrid
-This repository implements Graph Neural Networks for Power Grid use case. It is made for Reasearch & Development purpose and future integration in LIPS framework may be envisaged.
+This repository implements Physics Informed Neural Networks for Power Flow simulation.
 
+An MLP with physics loss (local conservation error) as pendalization or regularization. 
 <div align="center">
-  <img src="./imgs/gnn_eq_powergrid.png">
+  <img src="./imgs/regularized_mlp.png">
 </div>
 
+A graph-based approach to optimize the local conservation law. 
 <div align="center">
-  <img src="./imgs/gnn_scheme_powergrid.png">
+  <img src="./imgs/GNN_opt.png">
 </div>
+
+To read more about the different approaches, the reader is referred to the paper (available soon).
 
 <!-- ![eq](./imgs/gnn_eq_powergrid.png)
 ![scheme](./imgs/gnn_scheme_powergrid.png) -->
