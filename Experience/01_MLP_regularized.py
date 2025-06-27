@@ -400,7 +400,7 @@ if __name__ == "__main__":
 
     PATH = pathlib.Path().resolve().parent
     BENCH_CONFIG_PATH = PATH / "configs" / (ENV_NAME + ".ini")
-    DATA_PATH = PATH / "Datasets" / ENV_NAME / "DC" / "Benchmark4_complete"
+    DATA_PATH = PATH / "Datasets" / ENV_NAME / "DC"
     LOG_PATH = PATH / "lips_logs.log"
     
     # print(type(args.hidden_layers))
@@ -416,7 +416,7 @@ if __name__ == "__main__":
     device = "cuda:0" if torch.cuda.is_available() else "cpu" # or "cuda:0" if you have any GPU
     batch_size = args.batch_size
     
-    benchmark = PowerGridBenchmark(dataset_path=DATA_PATH,
+    benchmark = PowerGridBenchmark(benchmark_path=DATA_PATH,
                                    benchmark_name="Benchmark4",#"DoNothing",
                                    load_data_set=True,
                                    config_path=BENCH_CONFIG_PATH,

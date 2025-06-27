@@ -366,7 +366,7 @@ if __name__ == "__main__":
 
     PATH = pathlib.Path().resolve().parent
     BENCH_CONFIG_PATH = PATH / "configs" / (ENV_NAME + ".ini")
-    DATA_PATH = PATH / "Datasets" / ENV_NAME / "DC" / "Benchmark4_complete"
+    DATA_PATH = PATH / "Datasets" / ENV_NAME / "DC"
     LOG_PATH = PATH / "lips_logs.log"
     
     # print(type(args.hidden_layers))
@@ -382,7 +382,7 @@ if __name__ == "__main__":
     print(f"Device: {device}")
     print(f"batch_size: {batch_size}")
     
-    benchmark = PowerGridBenchmark(dataset_path=DATA_PATH,
+    benchmark = PowerGridBenchmark(benchmark_path=DATA_PATH,
                                    benchmark_name="Benchmark4",
                                    load_data_set=True,
                                    config_path=BENCH_CONFIG_PATH,

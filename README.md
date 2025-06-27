@@ -52,6 +52,13 @@ cd ..
 ```
 
 ## Using the scripts
+Data generation
+- `env_name`: The environment name to be selected. `l2rpn_case14_sandbox` or `l2rpn_neurips_2020_tack1_small`
+- `n_training_data`: Number of training data to be generated
+- `n_validation_data`: Number of validation data to be generated
+- `n_test_data`: Number of test data to be generated
+- `n_ood_data`: Number of test data to be generated
+
 Different arguments could be used for each script, which are details below:
 - `train`: A boolean to indicate whether the model should be trained
 - `epochs`: the number of epochs the model should be trained
@@ -72,6 +79,12 @@ GNN specific arguments:
 - `ref_node`: the reference node id in each environment
   - should be set to `0` for `l2rpn_case14_sandbox`
   - should be set to `35` for `l2rpn_neurips_2020_tack1_small`
+
+### Generate data
+The provided datasets in the repository are for the purpose of illustration and demo. For the proper training of the models, you should generate some more datasets using the following command.
+```bash
+python generate_data.py --env_name="l2rpn_case14_sandbox" --n_training_data=10000 --n_validation_data=10000 --n_test_data=10000 --n_ood_data=10000
+```
 
 ### Train a model
 Train an MLP model
